@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import "../../styles/navbar.css";
+import Container from "../ui/Container";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,11 +9,12 @@ function Navbar() {
   return (
     <header className="navbar">
 
-      <div className="nav-container">
+      <Container>
+              <div className="nav-container">
 
-        <div className="logo">
-          Faraz
-        </div>
+      <a href="#" className="logo">
+        F<span>A</span>
+      </a>
 
         <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
@@ -29,6 +31,7 @@ function Navbar() {
         </button>
 
       </div>
+      </Container>
 
     </header>
   );

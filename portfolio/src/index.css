@@ -13,3 +13,20 @@ body{
 h1,h2,h3,h4,h5,h6{
     font-family:"Sora",sans-serif;
 }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    overflow-x:hidden;
+
+}
+.container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
