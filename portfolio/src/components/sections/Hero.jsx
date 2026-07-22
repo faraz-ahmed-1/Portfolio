@@ -1,69 +1,96 @@
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import profile from "../../assets/images/profile.jpeg";
+
+import {
+  FaReact,
+  FaNodeJs,
+  FaGithub,
+} from "react-icons/fa";
+
+import {
+  SiExpress,
+  SiMysql,
+} from "react-icons/si";
 
 import "../../styles/hero.css";
 
-function Hero(){
+function Hero() {
+  return (
+    <section className="hero">
 
-    return(
+      <Container>
 
-<section className="hero">
+        <div className="hero-grid">
 
-<Container>
+          <div className="hero-left">
 
-<div className="hero-content">
+            <span className="hero-tag">
+              👋 Hello, I'm
+            </span>
 
-<div className="hero-left">
+            <h1>
+              Faraz Ahmed
+            </h1>
 
-<h4>Hello, I'm</h4>
+            <h2>
+              Full Stack Web Developer
+            </h2>
 
-<h1>Faraz Ahmed</h1>
+            <p>
+              Passionate about building modern,
+              responsive and scalable web applications
+              with clean design and exceptional user
+              experiences.
+            </p>
 
-<h2>Full Stack Web Developer</h2>
+            <div className="hero-buttons">
 
-<p>
+              <Button>
+                View Projects
+              </Button>
 
-I build modern, responsive and scalable web
-applications with a focus on performance,
-clean design and exceptional user experience.
+              <Button>
+                Contact Me
+              </Button>
 
-</p>
+            </div>
 
-<div className="hero-buttons">
+            <div className="tech-stack">
 
-<Button>
+              <FaReact />
 
-View Projects
+              <FaNodeJs />
 
-</Button>
+              <SiExpress />
 
-<Button>
+              <SiMysql />
 
-Download Resume
+              <FaGithub />
 
-</Button>
+            </div>
 
-</div>
+          </div>
 
-</div>
+          <div className="hero-right">
 
-<div className="hero-right">
+            <div className="image-circle">
 
-<img
-src="https://placehold.co/500x500/png"
-alt="Profile"
-/>
+              <img
+                src={profile}
+                alt="Faraz Ahmed"
+              />
 
-</div>
+            </div>
 
-</div>
+          </div>
 
-</Container>
+        </div>
 
-</section>
+      </Container>
 
-    )
-
+    </section>
+  );
 }
 
 export default Hero;

@@ -1,48 +1,27 @@
 import Container from "../ui/Container";
+import "../../styles/navbar.css";
 
 function Navbar() {
   return (
-    <header
-      style={{
-        position: "fixed",
-        width: "100%",
-        top: 0,
-        left: 0,
-        zIndex: 999,
-        backdropFilter: "blur(20px)",
-        background: "rgba(3,7,18,.6)",
-        borderBottom: "1px solid rgba(255,255,255,.06)",
-      }}
-    >
+    <header className="navbar">
       <Container>
-        <div
-          style={{
-            height: "80px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontFamily: "Sora",
-              fontWeight: 700,
-            }}
-          >
-            FA
-          </h2>
+        <div className="nav-container">
 
-          <nav
-            style={{
-              display: "flex",
-              gap: "35px",
-            }}
-          >
+          <a href="#" className="logo">
+            F<span>A</span>
+          </a>
+
+          <nav className="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
           </nav>
+
+          <a href="#" className="resume-btn">
+            Resume
+          </a>
+
         </div>
       </Container>
     </header>
